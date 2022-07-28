@@ -9,3 +9,7 @@ pm.environment.set("salary", exp_salary_1_5); //хз чо это
 pm.test("Check salary", function () { //проводим тест и сравниваем ожидаемый и фактический результат
         pm.expect(exp_salary_1_5).to.eql(salary_1_5); 
 });
+
+pm.test("Check family", function () {
+        pm.expect(JSON.stringify(jsonData)).to.include("family");
+    });
